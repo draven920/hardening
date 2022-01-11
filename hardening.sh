@@ -9,20 +9,20 @@ sudo apt-cache upgrade -yy >> /home/.hardening.log
 
 
 echo -e "Delete Telenet"
-sudo apt-cache remove telnet -yy >> /home/.hardening.log
+sudo apt remove telnet -yy >> /home/.hardening.log
 
 echo -e "Delete Aplikasi openoffice* thumb& "
-sudo apt-cache remove openoffice* && sudo apt-cache remove thumb -yy >> /home/.hardening.log
+sudo apt remove openoffice* && sudo apt remove thumb -yy >> /home/.hardening.log
 
-echo -e "Downloading Rkhunter"
-wget https://telkomuniversity.dl.sourceforge.net/project/rkhunter/rkhunter/1.4.6/rkhunter-1.4.6.tar.gz
+# echo -e "Downloading Rkhunter"
+# wget https://telkomuniversity.dl.sourceforge.net/project/rkhunter/rkhunter/1.4.6/rkhunter-1.4.6.tar.gz
 
-echo -e "Ekstrak Rkhunter"
-tar -xvf rkhunter-1.4.6.tar.gz
-cd rkhunter-1.4.6/
+# echo -e "Ekstrak Rkhunter"
+# tar -xvf rkhunter-1.4.6.tar.gz
+# cd rkhunter-1.4.6/
 
-echo -e "Install Rkhunter & Run"
-./installer.sh --install >> /home/.hardening.log
-rkhunter --check
+# echo -e "Install Rkhunter & Run"
+# ./installer.sh --install >> /home/.hardening.log
+# rkhunter --check
 
 echo -e "Hardening Selesai"
