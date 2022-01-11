@@ -40,7 +40,7 @@ printf "#Konfigurasi mematikan IP V6\nnet.ipv6.conf.all.disable_ipv6 = 1\nnet.ip
 sysctl -p 
 
 echo -e "Hardening Selesai"
-
+cd ~
 rm hardening.sh
 rm -r rkhunter-1.4.6
 rm rkhunter-1.4.6.tar.gz
