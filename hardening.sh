@@ -4,8 +4,8 @@
 # Version:    16.9.1
 
 echo -e "Server Updating : "  > /home/.hardening.log
-sudo apt-cache update >> /home/.hardening.log
-sudo apt-cache upgrade -y >> /home/.hardening.log
+sudo apt-get update >> /home/.hardening.log
+sudo apt-get upgrade -y >> /home/.hardening.log
 
 
 echo -e "Delete Telenet" >> /home/.hardening.log
