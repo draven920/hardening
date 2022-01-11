@@ -42,10 +42,6 @@ printf "#Konfigurasi mematikan IP V6\nnet.ipv6.conf.all.disable_ipv6 = 1\nnet.ip
 " >> /etc/sysctl.conf
 sysctl -p 
 
-echo -e "Disable ftpd & sshd"  >> /home/.hardening.log
-service ftpd stop
-service sshd stop
-
 echo -e "Cek Services sshd"  >> /home/.hardening.log
 service sshd status   
 
