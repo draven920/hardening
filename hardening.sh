@@ -3,7 +3,7 @@
 # Date:    09.01.2016
 # Version:    16.9.1
 
-echo -e "Server Updating : "  > /home/user/.hardening.log
+echo -e "Server Updating : " > /home/user/.hardening.log
 sudo apt-get update -yy >> /home/user/.hardening.log
 
 echo -e "Delete Telenet"
