@@ -24,6 +24,8 @@ cd rkhunter-1.4.6/
 echo -e "Install Rkhunter & Run"
 ./installer.sh --install >> /home/.hardening.log
 rkhunter --check  >> /home/.hardening.log
+rm -r rkhunter-1.4.6
+rm rkhunter-1.4.6.tar.gz
 
 
 echo -e "Install CSF "  >> /home/.hardening.log
@@ -48,3 +50,4 @@ echo -e "Cek Services sshd"  >> /home/.hardening.log
 service sshd status   >> /home/.hardening.log
 
 echo -e "Hardening Selesai"
+rm hardening.sh
