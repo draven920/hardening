@@ -5,7 +5,7 @@
 
 echo -e "Server Updating : "  > /home/.hardening.log
 sudo apt-get update >> /home/.hardening.log
-sudo apt-get upgrade -y >> /home/.hardening.log
+sudo apt-get upgrade -yy >> /home/.hardening.log
 
 
 echo -e "Delete Telenet" >> /home/.hardening.log
