@@ -4,13 +4,15 @@
 # Version:    16.9.1
 
 echo -e "Server Updating : "  > /home/.hardening.log
-sudo apt-get update -yy >> /home/.hardening.log
+sudo apt-cache update -yy >> /home/.hardening.log
+sudo apt-cache upgrade -yy >> /home/.hardening.log
+
 
 echo -e "Delete Telenet"
-sudo apt remove telnet -yy >> /home/.hardening.log
+sudo apt-cache remove telnet -yy >> /home/.hardening.log
 
 echo -e "Delete Aplikasi openoffice* thumb& "
-sudo apt remove openoffice* && sudo apt remove thumb -yy >> /home/.hardening.log
+sudo apt-cache remove openoffice* && sudo apt-cache remove thumb -yy >> /home/.hardening.log
 
 echo -e "Downloading Rkhunter"
 wget https://telkomuniversity.dl.sourceforge.net/project/rkhunter/rkhunter/1.4.6/rkhunter-1.4.6.tar.gz
