@@ -25,4 +25,4 @@ sudo apt remove openoffice* && sudo apt remove thumb -yy >> /home/.hardening.log
 # ./installer.sh --install >> /home/.hardening.log
 # rkhunter --check
 
-echo -e "Hardening Selesai"
+echo -e "Hardening Selesai."
