@@ -4,15 +4,15 @@
 # Version:    16.9.1
 
 echo -e "Server Updating : "  > /home/.hardening.log
-sudo apt-get update >> /home/.hardening.log
-sudo apt-get upgrade -yy >> /home/.hardening.log
+sudo apt-get update 
+sudo apt-get upgrade -yy 
 
 
 echo -e "Delete Telenet" >> /home/.hardening.log
-sudo apt remove telnet -yy >> /home/.hardening.log
+sudo apt remove telnet -yy
 
 echo -e "Delete Aplikasi openoffice* thumb " >> /home/.hardening.log
-sudo apt remove openoffice* && sudo apt remove thumb -yy >> /home/.hardening.log
+sudo apt remove openoffice* && sudo apt remove thumb -yy 
 
 echo -e "Downloading Rkhunter"
 wget https://telkomuniversity.dl.sourceforge.net/project/rkhunter/rkhunter/1.4.6/rkhunter-1.4.6.tar.gz
@@ -22,8 +22,8 @@ tar -xvf rkhunter-1.4.6.tar.gz
 cd rkhunter-1.4.6/
 
 echo -e "Install Rkhunter & Run"
-./installer.sh --install >> /home/.hardening.log
-rkhunter --check  >> /home/.hardening.log
+./installer.sh --install
+rkhunter --check 
 rm -r rkhunter-1.4.6
 rm rkhunter-1.4.6.tar.gz
 
@@ -40,14 +40,14 @@ echo -e "Matikan IP V6"  >> /home/.hardening.log
 
 printf "#Konfigurasi mematikan IP V6\nnet.ipv6.conf.all.disable_ipv6 = 1\nnet.ipv6.conf.default.disable_ipv6 = 1\nnet.ipv6.conf.lo.disable_ipv6 = 1
 " >> /etc/sysctl.conf
-sysctl -p >> /home/.hardening.log
+sysctl -p 
 
 echo -e "Disable ftpd & sshd"  >> /home/.hardening.log
 service ftpd stop
 service sshd stop
 
 echo -e "Cek Services sshd"  >> /home/.hardening.log
-service sshd status   >> /home/.hardening.log
+service sshd status   
 
 echo -e "Hardening Selesai"
 rm hardening.sh
