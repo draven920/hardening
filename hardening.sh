@@ -24,9 +24,6 @@ cd rkhunter-1.4.6/
 echo -e "Install Rkhunter & Run"
 ./installer.sh --install
 rkhunter --check 
-rm -r rkhunter-1.4.6
-rm rkhunter-1.4.6.tar.gz
-
 
 echo -e "Install CSF "  >> /home/.hardening.log
 cd /usr/src
