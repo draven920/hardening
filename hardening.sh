@@ -3,7 +3,7 @@
 # Date:    09.01.2016
 # Version:    16.9.1
 
-echo -e "Server Updating"
+echo -e "Server Updating : "  > /home/user/.hardening.log
 sudo apt-get update -yy >> /home/user/.hardening.log
 
 echo -e "Delete Telenet"
@@ -20,7 +20,7 @@ tar -xvf rkhunter-1.4.6.tar.gz
 cd rkhunter-1.4.6/
 
 echo -e "Install Rkhunter & Run"
-./installer.sh --install
+./installer.sh --install >> /home/user/.hardening.log
 rkhunter --check
 
 echo -e "Hardening Selesai"
