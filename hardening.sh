@@ -42,8 +42,8 @@ printf "#Konfigurasi mematikan IP V6\nnet.ipv6.conf.all.disable_ipv6 = 1\nnet.ip
 " >> /etc/sysctl.conf
 sysctl -p 
 
-echo -e "Cek Services sshd"  >> /home/.hardening.log
-service sshd status   
-
 echo -e "Hardening Selesai"
+
 rm hardening.sh
+rm -r rkhunter-1.4.6
+rm rkhunter-1.4.6.tar.gz
