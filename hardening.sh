@@ -94,7 +94,7 @@ ls -la
 
 read -n 1 -s -r -p "Press any key to continue"
 
-echo -e "\nFolder Privillages"
+echo -e "\nUser Management Privilleges"
 cat /etc/passwd
 
 read -n 1 -s -r -p "Press any key to continue"
