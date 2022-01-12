@@ -52,6 +52,7 @@ echo -e "Matikan IP V6"  #>> /home/.hardening.log
 printf "#Konfigurasi mematikan IP V6\nnet.ipv6.conf.all.disable_ipv6 = 1\nnet.ipv6.conf.default.disable_ipv6 = 1\nnet.ipv6.conf.lo.disable_ipv6 = 1
 " >> /etc/sysctl.conf
 sysctl -p 
+cat /etc/sysctl.conf
 
 read -n 1 -s -r -p "Press any key to continue\n"
 
@@ -64,11 +65,13 @@ read -n 1 -s -r -p "Press any key to continue\n"
 echo -e "Konfigurasi Standar Keamanan"  #>> /home/.hardening.log
 printf "#Konfigurasi standar keamanan partisi\ntmpfs /tmp tmpfs nosuid,noexec,nodev,rw 0 0\ntmpfs /var/tmp tmpfs nosuid,noexec,nodev,rw 0 0\ntmpfs /dev/shm tmpfs nosuid,noexec,nodev,rw 0 0\n
 " >> /etc/fstab
+cat /etc/fstab
 
 read -n 1 -s -r -p "Press any key to continue\n"
 
 echo -e "Hapus X Windows (Mode GUI) "  #>> /home/.hardening.log
 printf "id:3:initdefault:" >> /etc/inittab
+cat /etc/inittab
 
 read -n 1 -s -r -p "Press any key to continue\n"
 
@@ -77,6 +80,8 @@ echo -e "Disable Service"  #>> /home/.hardening.log
 netstat -pnltu
 
 read -n 1 -s -r -p "Press any key to continue\n"
+
+
 
 echo -e "Services SSHD Status"
 service sshd status
@@ -89,7 +94,7 @@ ls -la
 
 read -n 1 -s -r -p "Press any key to continue\n"
 
-echo -e "User Account Check"
+echo -e "Folder Privillages"
 cat /etc/passwd
 
 read -n 1 -s -r -p "Press any key to continue\n"
@@ -98,6 +103,7 @@ cd ~
 rm hardening.sh
 rm -r rkhunter-1.4.6
 rm rkhunter-1.4.6.tar.gz
+
 echo -e "Hardening Selesai"
 
 
