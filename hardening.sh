@@ -78,11 +78,6 @@ netstat -pnltu
 
 read -n 1 -s -r -p "Press any key to continue\n"
 
-cd ~
-rm hardening.sh
-rm -r rkhunter-1.4.6
-rm rkhunter-1.4.6.tar.gz
-
 echo -e "Services SSHD Status"
 service sshd status
 
@@ -99,7 +94,10 @@ cat /etc/passwd
 
 read -n 1 -s -r -p "Press any key to continue\n"
 
-
+cd ~
+rm hardening.sh
+rm -r rkhunter-1.4.6
+rm rkhunter-1.4.6.tar.gz
 echo -e "Hardening Selesai"
 
 
