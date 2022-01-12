@@ -94,7 +94,7 @@ ls -la
 
 read -n 1 -s -r -p "Press any key to continue\n"
 
-echo -e "Folder Privillages"
+echo -e "User Account Check"
 cat /etc/passwd
 
 read -n 1 -s -r -p "Press any key to continue\n"
